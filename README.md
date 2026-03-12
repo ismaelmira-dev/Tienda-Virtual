@@ -2,6 +2,9 @@
 
 API REST construida con **Node.js**, **Express** y **SQLite3** para gestionar una tienda virtual. Incluye gestión de usuarios, categorías, productos y pedidos con autenticación por API key.
 
+# Diagrama Entidad-Relación (ER)
+![3 1 Diagrama E-R](https://github.com/user-attachments/assets/248fd8e9-0f28-46c3-b230-2d235bf81126)
+
 ---
 
 ## 📋 Requisitos
