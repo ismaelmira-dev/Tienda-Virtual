@@ -12,7 +12,7 @@ router.get('/categorias', (req, res) => {
         return res.status(401).json({ success: false, message: 'API key es requerida' });
     }
 
-    if (apiKey !== '12345') {
+    if (apiKey !== process.env.API_PASSWORD1) {
         return res.status(403).json({ success: false, message: 'Error la password no es correcta' });
     }
 
@@ -40,7 +40,7 @@ router.get('/categorias/:id', (req, res) => {
         return res.status(401).json({ success: false, message: 'API key es requerida' });
     }
 
-    if (apiKey !== '12345') {
+    if (apiKey !== process.env.API_PASSWORD1) {
         return res.status(403).json({ success: false, message: 'Error la password no es correcta' });
     }
 
