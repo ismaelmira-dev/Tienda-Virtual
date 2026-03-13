@@ -14,7 +14,7 @@ app.use((req, res, next) => {
     });
   }
 
-  if (apiKey !== process.env.API_PASSWORD) {
+  if (apiKey !== process.env.API_PASSWORD1) {
     return res.status(403).json({
       success: false,
       message: ' la Password incorrecta'
