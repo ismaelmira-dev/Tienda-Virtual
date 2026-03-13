@@ -12,7 +12,7 @@ router.get('/usuarios', (req, res) => {
         return res.status(401).json({ success: false, message: 'API key es requerida' });
     }
 
-    if (apiKey !== process.env.API_PASSWORD) {
+    if (apiKey !== process.env.API_PASSWORD1) {
         return res.status(403).json({ success: false, message: 'Error la password no es correcta' });
     }
 
@@ -64,7 +64,7 @@ router.post('/usuarios', (req, res) => {
         return res.status(401).json({ success: false, message: 'API key es requerida' });
     }
 
-    if (apiKey !== process.env.API_PASSWORD) {
+    if (apiKey !== process.env.API_PASSWORD1) {
         return res.status(403).json({ success: false, message: 'Error la password no es correcta' });
     }
 
@@ -124,7 +124,7 @@ router.put('/usuarios/:id', (req, res) => {
         return res.status(401).json({ success: false, message: 'API key es requerida' });
     }
 
-    if (apiKey !== process.env.API_PASSWORD) {
+    if (apiKey !== process.env.API_PASSWORD1) {
         return res.status(403).json({ success: false, message: 'Error la password no es correcta' });
     }
 
@@ -190,7 +190,7 @@ router.delete('/usuarios/:id', (req, res) => {
         return res.status(401).json({ success: false, message: 'API key es requerida' });
     }
 
-    if (apiKey !== process.env.API_PASSWORD) {
+    if (apiKey !== process.env.API_PASSWORD1) {
         return res.status(403).json({ success: false, message: 'Error la password no es correcta' });
     }
 
