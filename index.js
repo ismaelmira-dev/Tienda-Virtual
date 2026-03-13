@@ -17,7 +17,7 @@ app.use((req, res, next) => {
   if (apiKey !== process.env.API_PASSWORD) {
     return res.status(403).json({
       success: false,
-      message: 'Password incorrecta'
+      message: ' la Password incorrecta'
     });
   }
 
@@ -25,14 +25,14 @@ app.use((req, res, next) => {
 });
 
 // Rutas
-app.use('/productos', require('./routes/productos'));
-app.use('/usuarios', require('./routes/usuarios'));
-app.use('/categorias', require('./routes/categorias'));
-app.use('/pedidos', require('./routes/pedidos'));
+app.use('/api', require('./routes/productos'));
+app.use('/api', require('./routes/usuarios'));
+app.use('/api', require('./routes/categorias'));
+app.use('/api', require('./routes/pedidos'));
 
 // Render asigna el puerto automáticamente via process.env.PORT
 const PORT = process.env.PORT || 3000;
 
 const server = app.listen(PORT, () => {
   console.log(`API corriendo en http://localhost:${server.address().port}`);
-});
+}); 
